@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function GradientProgressDemo() {
   const [percent, setPercent] = useState(0);
-  const id = useRef<ReturnType<typeof setInterval>>();
+  const id = useRef<ReturnType<typeof setInterval>>(undefined);
 
   const start = () => {
     setPercent(0);

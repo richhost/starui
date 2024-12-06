@@ -2,7 +2,7 @@ import React from "react";
 
 export const Index: Record<
   string,
-  React.LazyExoticComponent<(props: any) => JSX.Element>
+  React.LazyExoticComponent<(props: any) => React.JSX.Element>
 > = {
   "fancy-button-demo": React.lazy(() => import("@/example/fancy-button-demo")),
   "sparkles-button-demo": React.lazy(
