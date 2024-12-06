@@ -1,0 +1,43 @@
+{
+  "name": "starui",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@icons-pack/react-simple-icons": "^10.2.0",
+    "@radix-ui/react-scroll-area": "^1.2.1",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "chroma-js": "^3.1.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "motion": "^11.13.1",
+    "next": "15.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-use-measure": "^2.1.1",
+    "tailwind-merge": "^2.5.5",
+    "vaul": "^1.1.1"
+  },
+  "devDependencies": {
+    "@content-collections/core": "^0.7.3",
+    "@content-collections/mdx": "^0.2.0",
+    "@content-collections/next": "^0.2.4",
+    "@tailwindcss/postcss": "4.0.0-beta.5",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/chroma-js": "^2.4.4",
+    "@types/node": "^20.17.9",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.4.49",
+    "rehype-pretty-code": "^0.14.0",
+    "remark-code-import": "^1.2.0",
+    "remark-gfm": "^4.0.0",
+    "shiki": "^1.24.0",
+    "tailwindcss": "4.0.0-beta.5",
+    "typescript": "^5.7.2"
+  }
+}

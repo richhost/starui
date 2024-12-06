@@ -1,0 +1,41 @@
+---
+title: Installation
+---
+
+How to use Star UI components in your project.
+
+<Aside type="caution">This is not a library, it's a collection of components that you can copy pastes to your project.</Aside>
+
+## Dependencies
+
+```bash
+pnpm add motion react-use-measure
+```
+
+## Tailwind CSS
+
+All the components are built with Tailwind CSS v4, you can find installation instructions on [Tailwind Docs](https://tailwindcss.com/docs/v4-beta).
+
+## Utilities
+Install `clsx` and `tailwind-merge`
+
+```bash
+pnpm add clsx tailwind-merge
+```
+
+Add a cn helper
+
+```typescript
+// lib/utils.ts
+
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+```
+
+## Usage
+
+That's it! You can copy, paste and customize Star UI components to your project.

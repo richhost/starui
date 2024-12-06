@@ -1,0 +1,48 @@
+---
+title: Inner Glow
+---
+
+<Tabs>
+  <Tab value="Preview"><ComponentPreview name="inner-glow-demo" /></Tab>
+  <Tab value="Code">
+    ```tsx file=<rootDir>/src/example/inner-glow-demo.tsx
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Install
+
+**Update `global.css`**
+
+Add the following code to your `global.css` file:
+
+```css
+@property --hue-rotation {
+  syntax: "<angle>";
+  initial-value: 0turn;
+  inherits: false;
+}
+
+@theme {
+  --animate-inner-glow: inner-glow 4s linear infinite;
+  @keyframes inner-glow {
+    from {
+      --hue-rotation: 0turn;
+    }
+    to {
+      --hue-rotation: 1turn;
+    }
+  }
+}
+```
+
+**Copy and paste the following code into your project.**
+
+```tsx file=<rootDir>/src/registry/inner-glow.tsx
+```
+
+---
+
+Inspired by [Ana Tudor](https://bsky.app/profile/anatudor.bsky.social/post/3lbvxdgxxac24).
