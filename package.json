@@ -26,18 +26,18 @@
     "@content-collections/core": "^0.7.3",
     "@content-collections/mdx": "^0.2.0",
     "@content-collections/next": "^0.2.4",
-    "@tailwindcss/postcss": "4.0.0-beta.5",
+    "@tailwindcss/postcss": "4.0.0-beta.6",
     "@tailwindcss/typography": "^0.5.15",
     "@types/chroma-js": "^2.4.4",
     "@types/node": "^20.17.9",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
     "postcss": "^8.4.49",
     "rehype-pretty-code": "^0.14.0",
     "remark-code-import": "^1.2.0",
     "remark-gfm": "^4.0.0",
     "shiki": "^1.24.0",
-    "tailwindcss": "4.0.0-beta.5",
+    "tailwindcss": "4.0.0-beta.6",
     "typescript": "^5.7.2"
   }
 }
