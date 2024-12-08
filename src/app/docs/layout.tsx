@@ -1,9 +1,10 @@
+import { MobileNav } from "@/components/mobile-nav";
 import { Nav } from "@/components/nav";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function DocLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-[url('/site-background-image.svg')] bg-repeat bg-[size:4px_4px] min-h-dvh">
+    <div className="bg-[url('/site-background-image.svg')] bg-repeat bg-[size:4px_4px] min-h-svh">
       <div className="max-w-screen-2xl mx-auto grid md:grid-cols-[300px_1fr]">
         <aside className="hidden md:block p-5 md:p-10 h-[calc(100vh-calc(var(--spacing)*16))] overflow-hidden sticky top-16">
           <ScrollArea className="h-full">
@@ -15,8 +16,11 @@ export default function DocLayout({ children }: { children: React.ReactNode }) {
           <article className="prose mx-auto max-w-none prose-neutral">
             {children}
           </article>
+          <div className="md:hidden h-16"></div>
         </div>
       </div>
+
+      <MobileNav />
     </div>
   );
 }

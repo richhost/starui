@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { SiGithub } from "@icons-pack/react-simple-icons";
-import { MobileNav } from "./mobile-nav";
 import { PolkaDotMask } from "@/registry/polka-dot-mask";
 
 export function Header() {
@@ -23,16 +22,13 @@ export function Header() {
             Components
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
-          <a
-            href="https://github.com/richhost/starui"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <SiGithub className="size-5" />
-          </a>
-          <MobileNav />
-        </div>
+        <a
+          href="https://github.com/richhost/starui"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <SiGithub className="size-5" />
+        </a>
       </header>
     </div>
   );
