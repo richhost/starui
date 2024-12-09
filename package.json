@@ -36,7 +36,7 @@
     "rehype-pretty-code": "^0.14.0",
     "remark-code-import": "^1.2.0",
     "remark-gfm": "^4.0.0",
-    "shiki": "^1.24.0",
+    "shiki": "^1.24.1",
     "tailwindcss": "4.0.0-beta.6",
     "typescript": "^5.7.2"
   }
