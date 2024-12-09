@@ -49,6 +49,10 @@ export const COMPONENTS: Navigation[] = [
     name: "Inner Glow",
     path: "/docs/components/inner-glow",
   },
+  {
+    name: "Scroll Island",
+    path: "/docs/components/scroll-island",
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [

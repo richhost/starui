@@ -1,0 +1,251 @@
+---
+title: Scroll Island
+---
+
+<Iframe src="https://uilabs.abiee.art/scroll-island/" />
+
+
+---
+
+## Install
+
+**Copy and paste the following code into your project.**
+
+```bash
+pnpm add usehooks-ts
+```
+
+**Copy and paste the following code into your project.**
+
+```tsx
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
+import { Fragment, useRef, useState } from "react";
+import { ChevronsUpDown } from "lucide-react";
+import useMeasure from "react-use-measure";
+import { useOnClickOutside } from "usehooks-ts";
+
+const sections = [
+  {
+    id: "Tailwind CSS",
+    title: "Tailwind CSS",
+    content: `Tailwind CSS is an open-source CSS framework. Unlike other frameworks, like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables. Instead, it creates a list of "utility" CSS classes that can be used to style each element by mixing and matching.
+
+For example, in other traditional systems, there would be a class message-warning that would apply a yellow background color and bold text. To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.
+
+As of 5 August 2024, Tailwind CSS has over 81,000 stars on GitHub.`,
+  },
+  {
+    id: "Features",
+    title: "Features",
+    content:
+      "Due to the difference in basic concepts in relation to other traditional CSS frameworks such as Bootstrap, it is important to know the philosophy from which Tailwind was created, as well as its basic usage. ",
+  },
+  {
+    id: "Utility classes",
+    title: "Utility classes",
+    content:
+      "The utility-first concept refers to the main differentiating feature of Tailwind.[8] Instead of creating classes around components (button, panel, menu, textbox ...), classes are built around a specific style element (yellow color, bold font, very large text, center element...). Each of these classes is called utility classes. ",
+  },
+  {
+    id: "Variants",
+    title: "Variants",
+    content: `Tailwind offers the possibility to apply a utility class only in some situations through media queries, which is called a variant. The main use of variants is to design a responsive interface for various screen sizes. There are also variants for the different states an element can have, such as hover: for when hovered, focus: when keyboard selected or active: when in use, or when the browser or operating system has dark mode enabled.
+
+Variants have two parts: the condition to be met and the class that is applied if the condition is met. For example, the variant md:bg-yellow-400 will apply the class bg-yellow-400 if the screen size is at least the value defined for md.
+
+Tailwind CSS is developed using JavaScript, runs via Node.js, and installs with environment package managers like npm or yarn.`,
+  },
+  {
+    id: "Settings and themes",
+    title: "Settings and themes",
+    content:
+      "It is possible to configure the utility classes and variants that Tailwind offers through a configuration file usually named tailwind.config.js. In the configuration, one can set the values of the utility classes, such as the color-palette or the sizes between elements for margins.",
+  },
+  {
+    id: "Versions",
+    title: "Versions",
+    content:
+      "Tailwind CSS uses semantic versioning to identify its version compatibility. ",
+  },
+];
+
+export default function ScrollIsland() {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [extended, setExtended] = useState(false);
+  const [percent, setPercent] = useState(0);
+  const [navRef, { width, height }] = useMeasure();
+  const triggerRef = useRef<HTMLDivElement | null>(null);
+
+  const { scrollYProgress } = useScroll({
+    container: containerRef,
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setPercent(Math.floor(latest * 100));
+  });
+
+  useOnClickOutside(triggerRef, () => setExtended(false));
+
+  return (
+    <>
+      <div
+        ref={containerRef}
+        className="w-full h-svh overflow-auto py-20 scroll-smooth"
+        style={{
+          mask: "linear-gradient(#0000, #fff 28px calc(100% - 80px), #0000)",
+        }}
+      >
+        <div className="max-w-xl px-6 mx-auto">
+          <header>
+            <h1 className="text-lg font-semibold py-4">
+              Crafting Intuitive Product Interactions
+            </h1>
+            <p className="mb-10 text-neutral-600">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab labore
+              iusto cupiditate saepe explicabo quidem minima! Nihil dolores
+              provident facere animi, impedit dolore quibusdam incidunt eos
+              velit doloribus iste? Voluptates.
+            </p>
+          </header>
+
+          <main className="">
+            {sections.map((item) => (
+              <Fragment key={item.id}>
+                <h2 className="text-lg font-semibold py-4" id={item.id}>
+                  {item.title}
+                </h2>
+                <p className="mb-4">{item.content}</p>
+              </Fragment>
+            ))}
+          </main>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {extended && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            className="fixed inset-0 z-10 bg-white/50 backdrop-blur"
+          ></motion.div>
+        )}
+      </AnimatePresence>
+
+      <motion.div
+        ref={triggerRef}
+        layout
+        style={{
+          borderRadius: 32,
+          padding: 8,
+          width: 220,
+        }}
+        animate={{
+          width: extended ? width : 220,
+        }}
+        transition={{ type: "spring", bounce: 0.3 }}
+        className="bg-neutral-900 text-neutral-50 fixed bottom-10 left-1/2 -translate-x-1/2 overflow-hidden shadow-md z-20"
+      >
+        <motion.div
+          className="overflow-hidden"
+          style={{
+            pointerEvents: extended ? "auto" : "none",
+            opacity: 0,
+            height: 0,
+          }}
+          animate={{
+            opacity: extended ? 1 : 0,
+            filter: `blur(${extended ? 0 : 8}px)`,
+            height: extended ? height : 0,
+          }}
+        >
+          <ol
+            ref={navRef}
+            className="px-4 min-w-[320px] pt-4 pb-8 flex flex-col gap-2"
+          >
+            {sections.map((item) => (
+              <li
+                key={item.id}
+                className="text-neutral-400 hover:text-neutral-50 transition-colors list-item list-[pad-it] ml-5"
+              >
+                <a
+                  href={`#${item.id}`}
+                  className="inline-flex w-full"
+                  onClick={() => setExtended(false)}
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </motion.div>
+
+        <button
+          onClick={() => setExtended(!extended)}
+          className="flex items-center gap-10 justify-between w-full px-px"
+        >
+          <motion.span
+            animate={{
+              x: extended ? 12 : 0,
+              y: extended ? -12 : 0,
+            }}
+            className="flex items-center gap-1"
+            transition={{ type: "spring", bounce: 0.3 }}
+          >
+            <svg className="size-7 -rotate-90" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="35"
+                strokeWidth="15"
+                fill="none"
+                className="stroke-neutral-500"
+              ></circle>
+              <motion.circle
+                cx="50"
+                cy="50"
+                r="35"
+                strokeWidth="15"
+                strokeDashoffset="0"
+                fill="none"
+                pathLength="1"
+                style={{ pathLength: scrollYProgress }}
+                className="stroke-neutral-50"
+                strokeLinecap="round"
+              />
+            </svg>
+            <span className="font-semibold ml-1">Index</span>
+            <ChevronsUpDown size={15} />
+          </motion.span>
+          <motion.span
+            layout
+            animate={{
+              x: extended ? -12 : 0,
+              y: extended ? -12 : 0,
+            }}
+            transition={{ type: "spring", bounce: 0.3 }}
+            className="bg-white/20 w-16 rounded-full py-1 font-semibold"
+          >
+            {percent}%
+          </motion.span>
+        </button>
+      </motion.div>
+    </>
+  );
+}
+```
+
+---
+
+Inspired by [nitishkmrk](https://x.com/nitishkmrk/status/1850066078505771078).
