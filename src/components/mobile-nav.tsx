@@ -18,7 +18,7 @@ export function MobileNav() {
   return (
     <Drawer.Root open={open} onOpenChange={setOpen}>
       <Drawer.Trigger asChild>
-        <FancyButton className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-green-500 ring-green-600/90">
+        <FancyButton className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 from-green-500 to-green-500 ring-green-600 py-2">
           Components
         </FancyButton>
       </Drawer.Trigger>
