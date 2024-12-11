@@ -26,7 +26,7 @@ export function Hero() {
       </p>
 
       <div className="mt-8 flex flex-wrap gap-10 w-full justify-center">
-        <FancyButton className="p-0 from-green-500 to-green-500 ring-green-600 font-semibold">
+        <FancyButton className="p-0 bg-green-500 border-green-600 font-semibold">
           <Link
             href="/docs"
             className="flex items-center gap-1 px-4 py-2 group"
