@@ -26,4 +26,5 @@ export const Index: Record<
     () => import("@/example/gradient-progress-demo")
   ),
   "inner-glow-demo": React.lazy(() => import("@/example/inner-glow-demo")),
+  "pricing-demo": React.lazy(() => import("@/example/pricing-demo")),
 };

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^10.2.0",
+    "@number-flow/react": "^0.4.2",
     "@radix-ui/react-scroll-area": "^1.2.1",
     "@radix-ui/react-tabs": "^1.1.1",
     "chroma-js": "^3.1.2",

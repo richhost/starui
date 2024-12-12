@@ -53,6 +53,10 @@ export const COMPONENTS: Navigation[] = [
     name: "Scroll Island",
     path: "/docs/components/scroll-island",
   },
+  {
+    name: "Pricing",
+    path: "/docs/components/pricing",
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [
