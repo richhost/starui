@@ -1,6 +1,7 @@
 interface Navigation {
   name: string;
   path: string;
+  isNew?: boolean;
 }
 
 interface NavigationGroup {
@@ -56,6 +57,7 @@ export const COMPONENTS: Navigation[] = [
   {
     name: "Pricing",
     path: "/docs/components/pricing",
+    isNew: true,
   },
 ];
 

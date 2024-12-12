@@ -24,6 +24,11 @@ export function Nav() {
               >
                 <Link href={item.path} className="h-7 inline-flex items-center">
                   {item.name}
+                  {item.isNew && (
+                    <span className="text-[10px] ml-2 border border-green-400 text-green-500 bg-green-100 px-1 rounded-sm">
+                      New
+                    </span>
+                  )}
                 </Link>
               </li>
             ))}
