@@ -59,6 +59,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/pricing",
     isNew: true,
   },
+  {
+    name: "Neumorphism Box",
+    path: "/docs/components/neumorphism-box",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [

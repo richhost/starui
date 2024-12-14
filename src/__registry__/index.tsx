@@ -27,4 +27,7 @@ export const Index: Record<
   ),
   "inner-glow-demo": React.lazy(() => import("@/example/inner-glow-demo")),
   "pricing-demo": React.lazy(() => import("@/example/pricing-demo")),
+  "neumorphism-box-demo": React.lazy(
+    () => import("@/example/neumorphism-box-demo")
+  ),
 };
