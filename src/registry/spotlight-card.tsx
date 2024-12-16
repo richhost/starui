@@ -39,7 +39,7 @@ function Spotlight({ className }: { className?: string }) {
     <div
       aria-hidden
       className={cn(
-        "pointer-events-none group-hover:scale-100 scale-0 transition-transform absolute -translate-x-1/2 -translate-y-1/2 left-(--x) top-(--y) w-20 h-20 bg-radial-[circle_at_center] from-blue-400 to-transparent to-60%",
+        "pointer-events-none opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition absolute -translate-x-1/2 -translate-y-1/2 left-(--x) top-(--y) w-20 h-20 bg-radial-[circle_at_center] from-blue-400 to-transparent to-60%",
         className
       )}
     />
