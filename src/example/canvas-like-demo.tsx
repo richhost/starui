@@ -10,7 +10,7 @@ export default function CanvasLikeDemo() {
             backgroundColor: "#fff",
             opacity: 0.8,
             backgroundImage:
-              "linear-gradient(#efefef 1px, transparent 1px), linear-gradient(to right, #efefef 1px, #ffffff 1px)",
+              "linear-gradient(var(--color-slate-100) 1px, transparent 1px), linear-gradient(to right, var(--color-slate-100) 1px, #ffffff 1px)",
             backgroundSize: "20px 20px",
           }}
         ></div>
