@@ -15,7 +15,7 @@
 }
 
 @theme {
-  --default-font-family: var(--font-geist-sans);
+  --default-font-family: var(--font-mona-sans);
   --default-mono-font-family: var(--font-jetbrains-mono);
   --ease-spring: linear(
     0,
