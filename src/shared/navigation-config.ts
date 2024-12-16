@@ -64,6 +64,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/neumorphism-box",
     isNew: true,
   },
+  {
+    name: "Canvas Like",
+    path: "/docs/components/canvas-like",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [

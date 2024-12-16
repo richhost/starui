@@ -30,4 +30,5 @@ export const Index: Record<
   "neumorphism-box-demo": React.lazy(
     () => import("@/example/neumorphism-box-demo")
   ),
+  "canvas-like-demo": React.lazy(() => import("@/example/canvas-like-demo")),
 };
