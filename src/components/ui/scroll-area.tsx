@@ -1,5 +1,5 @@
 import React from "react";
-import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
+import { ScrollArea as ScrollAreaPrimitive } from "@base-ui-components/react/scroll-area";
 import { cn } from "@/lib/utils";
 
 const ScrollArea = ({
@@ -15,11 +15,12 @@ const ScrollArea = ({
     {...props}
   >
     <ScrollAreaPrimitive.Viewport
-      className={cn("w-full h-full", viewportClassName)}
+      className={cn("overscroll-contain", viewportClassName)}
     >
       {children}
-      <ScrollBar />
     </ScrollAreaPrimitive.Viewport>
+    <ScrollBar />
+    <ScrollBar orientation="horizontal" />
     <ScrollAreaPrimitive.Corner />
   </ScrollAreaPrimitive.Root>
 );
@@ -28,21 +29,19 @@ const ScrollBar = ({
   className,
   orientation = "vertical",
   ...props
-}: React.ComponentProps<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>) => (
-  <ScrollAreaPrimitive.ScrollAreaScrollbar
+}: React.ComponentProps<typeof ScrollAreaPrimitive.Scrollbar>) => (
+  <ScrollAreaPrimitive.Scrollbar
     orientation={orientation}
     className={cn(
-      "flex touch-none select-none",
-      orientation === "vertical" &&
-        "h-full w-2.5 border-l border-l-transparent p-[1px]",
-      orientation === "horizontal" &&
-        "h-2.5 flex-col border-t border-t-transparent p-[1px]",
+      "m-1 flex rounded bg-neutral-200 opacity-0 transition-opacity delay-300 [[data-hovering],[data-scrolling]]:opacity-100 [[data-hovering],[data-scrolling]]:delay-0 [[data-hovering],[data-scrolling]]:duration-75",
+      orientation === "vertical" && "justify-center w-1 hover:w-2",
+      orientation === "horizontal" && "items-center h-1 hover:h-2",
       className
     )}
     {...props}
   >
-    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-neutral-200" />
-  </ScrollAreaPrimitive.ScrollAreaScrollbar>
+    <ScrollAreaPrimitive.Thumb className="data-[orientation=vertical]:w-full data-[orientation='horizontal']:h-full rounded bg-neutral-400" />
+  </ScrollAreaPrimitive.Scrollbar>
 );
 
 export { ScrollArea, ScrollBar };

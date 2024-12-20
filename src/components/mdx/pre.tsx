@@ -30,8 +30,6 @@ export function Pre({ ...props }: Props) {
     >
       <pre ref={preRef} {...props} />
 
-      <ScrollBar orientation="horizontal" />
-
       <button
         className="absolute top-4 right-4 cursor-pointer bg-white p-1 rounded-sm border border-neutral-200"
         onClick={handleClickCopy}

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply antialiased bg-gray-50/5 min-h-svh;
+    @apply antialiased bg-gray-50/5 min-h-svh isolate;
   }
 }
 
