@@ -10,7 +10,7 @@ export default function StackCardDemo() {
 }
 
 const exampleData = [
-  <div className="w-84 rounded-md p-5 bg-blue-100 border-2 border-blue-300 space-y-2 shadow-lg shadow-blue-200">
+  <div className="w-80 rounded-md p-5 bg-blue-100 border-2 border-blue-300 space-y-2 shadow-lg shadow-blue-200">
     <p className="text-sm uppercase">Feature #1</p>
     <h3 className="text-lg text-balance font-semibold">
       Introduce a feature and its benefit.
@@ -23,7 +23,7 @@ const exampleData = [
       short and sweet.
     </p>
   </div>,
-  <div className="w-84 rounded-md p-5 bg-amber-100 border-2 border-amber-300 space-y-2 shadow-lg shadow-amber-200">
+  <div className="w-80 rounded-md p-5 bg-amber-100 border-2 border-amber-300 space-y-2 shadow-lg shadow-amber-200">
     <p className="text-sm uppercase">Feature #2</p>
     <h3 className="text-lg text-balance font-semibold">
       Introduce a feature and its benefit.
@@ -36,7 +36,7 @@ const exampleData = [
       short and sweet.
     </p>
   </div>,
-  <div className="w-84 rounded-md p-5 bg-green-100 border-2 border-green-300 space-y-2 shadow-lg shadow-green-200">
+  <div className="w-80 rounded-md p-5 bg-green-100 border-2 border-green-300 space-y-2 shadow-lg shadow-green-200">
     <p className="text-sm uppercase">Feature #3</p>
     <h3 className="text-lg text-balance font-semibold">
       Introduce a feature and its benefit.
