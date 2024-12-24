@@ -17,11 +17,14 @@ function StackCard({ cards, className, ...props }: StackCard) {
           <motion.div
             key={index}
             initial={false}
-            className={cn(index > 0 && "absolute bottom-0 left-0 w-full")}
+            className={cn(
+              index > 0 && "absolute bottom-0 left-0 w-full",
+              current < index && "pointer-events-none"
+            )}
             animate={{
               opacity: index <= current ? 1 : 0,
-              y: Math.min(0, (index - current) * 28),
-              scale: Math.min(1, 1 + (index - current) * 0.08),
+              y: (index - current) * 28,
+              scale: 1 + (index - current) * 0.08,
             }}
           >
             {card}
