@@ -69,6 +69,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/canvas-like",
     isNew: true,
   },
+  {
+    name: "Stack Card",
+    path: "/docs/components/stack-card",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [
