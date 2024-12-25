@@ -78,7 +78,7 @@ function TextDispersion({
           animate={{
             opacity: enter ? 1 : 0,
           }}
-        ></motion.div>
+        />
       )}
     </>
   );
