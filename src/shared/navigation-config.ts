@@ -74,6 +74,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/stack-card",
     isNew: true,
   },
+  {
+    name: "Text Dispersion",
+    path: "/docs/components/text-dispersion",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [

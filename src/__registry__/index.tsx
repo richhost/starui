@@ -32,4 +32,7 @@ export const Index: Record<
   ),
   "canvas-like-demo": React.lazy(() => import("@/example/canvas-like-demo")),
   "stack-card-demo": React.lazy(() => import("@/example/stack-card-demo")),
+  "text-dispersion-demo": React.lazy(
+    () => import("@/example/text-dispersion-demo")
+  ),
 };
