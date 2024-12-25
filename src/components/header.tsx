@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { PolkaDotMask } from "@/registry/polka-dot-mask";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -10,12 +11,22 @@ export function Header() {
       <header className="max-w-screen-2xl mx-auto px-5 md:px-10 h-16 flex items-center justify-between relative z-10">
         <div className="flex items-center gap-8 text-sm text-neutral-500 font-medium">
           <div className="flex items-center gap-2 text-black">
-            <Link href="/" className="text-lg font-semibold">
-              Star UI
+            <Link
+              href="/"
+              className="text-lg font-semibold flex items-center gap-2"
+            >
+              <Image
+                className="size-6"
+                width={48}
+                height={48}
+                src="/logo.svg"
+                alt="Star UI"
+              />
+              <span className="font-poppins uppercase">Star UI</span>
+              <span className="text-xs font-semibold px-2 py-1 bg-black/5 rounded-md">
+                Beta
+              </span>
             </Link>
-            <span className="text-xs font-semibold px-2 py-1 bg-black/5 rounded-md">
-              Beta
-            </span>
           </div>
 
           <Link href="/docs/components" className="hover:text-black">

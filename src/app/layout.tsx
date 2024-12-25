@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Mona_Sans } from "next/font/google";
+import { JetBrains_Mono, Poppins, Mona_Sans } from "next/font/google";
 import { Header } from "@/components/header";
 
 import "./globals.css";
@@ -14,6 +14,11 @@ const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: "variable",
 });
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: "600",
+});
 
 export const metadata: Metadata = {
   title: "Star UI",
@@ -27,6 +32,15 @@ export const metadata: Metadata = {
     "Landing Page",
     "Next.js",
   ],
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        url: "/logo.svg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -37,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monaSans.variable} ${jetBrainsMono.variable}`}
+      className={`${monaSans.variable} ${poppins.variable} ${jetBrainsMono.variable}`}
     >
       <body>
         <Header />

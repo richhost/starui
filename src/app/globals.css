@@ -17,6 +17,7 @@
 @theme {
   --default-font-family: var(--font-mona-sans);
   --default-mono-font-family: var(--font-jetbrains-mono);
+  --font-poppins: var(--font-poppins);
   --ease-spring: linear(
     0,
     0.009,
