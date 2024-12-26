@@ -79,6 +79,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/text-dispersion",
     isNew: true,
   },
+  {
+    name: "Select Model",
+    path: "/docs/components/select-model",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [
