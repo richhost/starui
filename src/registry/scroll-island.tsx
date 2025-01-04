@@ -64,7 +64,7 @@ export function ScrollIsland() {
               <motion.li
                 key={item.title}
                 className={cn(
-                  "list-inside list-decimal transition-[filter]",
+                  "list-inside list-decimal transition-[filter] text-neutral-300",
                   open ? "blur-none" : "blur-sm"
                 )}
               >
