@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Poppins, Mona_Sans } from "next/font/google";
-import { Header } from "@/components/header";
 
 import "./globals.css";
 
@@ -53,10 +52,7 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${poppins.variable} ${jetBrainsMono.variable}`}
     >
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

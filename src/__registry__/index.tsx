@@ -36,4 +36,7 @@ export const Index: Record<
     () => import("@/example/text-dispersion-demo")
   ),
   "select-model-demo": React.lazy(() => import("@/example/select-model-demo")),
+  "scroll-island-demo": React.lazy(
+    () => import("@/example/scroll-island-demo")
+  ),
 };
