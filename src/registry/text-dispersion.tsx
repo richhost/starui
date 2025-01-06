@@ -29,7 +29,6 @@ const variants: Variants = {
     x: getX(index, length) + "em",
     y: getRandom(-0.5, 0.5) + "em",
     rotateZ: getRandom(-20, 20) + "deg",
-    zIndex: 20,
   }),
   leave: {
     x: 0,
@@ -57,7 +56,7 @@ function TextDispersion({
         <span className="sr-only">{text}</span>
         {letters.map((letter, index) => (
           <motion.span
-            className="inline-block relative"
+            className={cn("inline-block relative", overlay && "z-10")}
             key={`${letter}-${index}`}
             aria-hidden
             custom={{ index, length: letters.length }}
