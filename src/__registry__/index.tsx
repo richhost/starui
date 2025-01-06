@@ -39,4 +39,7 @@ export const Index: Record<
   "scroll-island-demo": React.lazy(
     () => import("@/example/scroll-island-demo")
   ),
+  "light-weight-cards-demo": React.lazy(
+    () => import("@/example/light-weight-cards-demo")
+  ),
 };

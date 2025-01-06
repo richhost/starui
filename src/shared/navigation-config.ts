@@ -84,6 +84,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/select-model",
     isNew: true,
   },
+  {
+    name: "Light Weight Cards",
+    path: "/docs/components/light-weight-cards",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [
