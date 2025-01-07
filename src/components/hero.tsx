@@ -7,45 +7,80 @@ import {
 } from "@icons-pack/react-simple-icons";
 import React from "react";
 import { FancyButton } from "@/registry/fancy-button";
+import { LightWeightCards } from "@/registry/lightweight-cards";
+import { NeumorphismBox } from "@/registry/neumorphism-box";
 
 export function Hero() {
   return (
-    <div className="flex flex-col items-center gap-5 mt-16 md:mt-30">
-      <p className="flex text-sm font-medium items-center mb-8 px-3 py-1 rounded-full border border-neutral-200">
-        <span className="pr-2 border-r border-neutral-200">🎉</span>
-        <span className="ml-2">New releases every week</span>
-      </p>
-
-      <h1 className="text-4xl md:text-6xl text-balance text-center font-bold">
-        Craft Stunning Websites with Beautiful Components
-      </h1>
-      <p className="md:text-xl md:max-w-xl text-center">
-        Transform your website with beautiful, customizable{" "}
-        <strong>Tailwind CSS v4</strong> and <strong>Motion React</strong>{" "}
-        components. Copy, paste, and tweak to create designs that truly shine.
-      </p>
-
-      <div className="mt-8 flex flex-wrap gap-10 w-full justify-center">
-        <FancyButton className="p-0 bg-green-500 border-green-600 font-semibold">
-          <Link
-            href="/docs"
-            className="flex items-center gap-1 px-4 py-2 group"
+    <main
+      className="min-h-[calc(100vh-var(--spacing)*14)] flex flex-col
+      items-center justify-center gap-10"
+    >
+      <div>
+        <div className="flex justify-center mb-6">
+          <div
+            className="inline-flex items-center rounded-full justify-center
+           border border-neutral-200 px-2 py-1"
           >
-            Browser Components
-            <ChevronRight className="group-hover:translate-x-1 transition-transform size-4 md:size-5" />
+            <span className="mr-2 border-r pr-2 border-neutral-200">🎉</span>
+            <p className="text-sm font-medium">New releases every week</p>
+          </div>
+        </div>
+
+        <h1 className="text-4xl lg:text-6xl text-balance font-bold font-poppins text-center">
+          Today, it's StarUI.
+          <br />
+          Tomorrow, it's yours!
+        </h1>
+
+        <p className="text-balance text-center max-w-xl mt-4">
+          Transform your website with beautiful, customizable{" "}
+          <strong>Tailwind CSS v4</strong> and <strong>Motion React</strong>{" "}
+          components. <strong>Copy</strong>, <strong>paste</strong>, and tweak
+          to create designs that truly shine.
+        </p>
+      </div>
+
+      <LightWeightCards.Root className="-translate-x-10">
+        {cards.flatMap((item, index) => (
+          <LightWeightCards.Card key={index} index={index} className="min-w-64">
+            <div className="p-5">
+              <span className="block mb-4">{item.icon}</span>
+              <h3>{item.title}</h3>
+            </div>
+          </LightWeightCards.Card>
+        ))}
+      </LightWeightCards.Root>
+
+      <NeumorphismBox className="mt-24 p-3 rounded-md">
+        <FancyButton className="p-0 rounded-md bg-neutral-700">
+          <Link href="/docs/components" className="px-4 py-2 inline-block">
+            <span>Browse component</span>
           </Link>
         </FancyButton>
-
-        <div className="flex items-center justify-center gap-4">
-          <SiTailwindcss />
-          <MotionIcon />
-          <SiReact />
-          <SiTypescript />
-        </div>
-      </div>
-    </div>
+      </NeumorphismBox>
+    </main>
   );
 }
+
+const cards = [
+  {
+    icon: <SiTypescript className="text-[#3178c6]" />,
+    title: "Typescript",
+  },
+  {
+    icon: <SiReact className="text-[#087ea4]" />,
+    title: "React",
+  },
+  {
+    icon: <MotionIcon />,
+    title: "Motion React",
+  },
+  {
+    icon: <SiTailwindcss className="text-[#38bdf8]" />,
+    title: "Tailwind CSS v4",
+  },
+];
 
 function MotionIcon(props: React.ComponentProps<"svg">) {
   return (
