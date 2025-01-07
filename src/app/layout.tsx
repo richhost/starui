@@ -52,7 +52,7 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${poppins.variable} ${jetBrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body className="min-h-svh">{children}</body>
     </html>
   );
 }

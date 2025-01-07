@@ -5,10 +5,16 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <div className="sticky z-20 top-0 bg-white/20 backdrop-blur-md shadow-lg shadow-black/5">
+    <div className="sticky z-20 top-0 bg-white/20 backdrop-blur-md border-b border-neutral-200">
       <PolkaDotMask />
 
-      <header className="max-w-screen-2xl mx-auto px-5 md:px-10 h-16 flex items-center justify-between relative z-10">
+      <header
+        className="max-w-screen-2xl mx-auto px-5 md:px-10 h-14
+        2xl:border-x border-neutral-200
+      flex items-center justify-between relative z-10"
+      >
+        <div className="hidden 2xl:block absolute size-2 border left-0 bottom-0 rotate-45 -translate-x-1/2 translate-y-1/2 bg-white border-neutral-300"></div>
+        <div className="hidden 2xl:block absolute size-2 border right-0 bottom-0 rotate-45 translate-x-1/2 translate-y-1/2 bg-white border-neutral-300"></div>
         <div className="flex items-center gap-8 text-sm text-neutral-500 font-medium">
           <div className="flex items-center gap-2 text-black">
             <Link
