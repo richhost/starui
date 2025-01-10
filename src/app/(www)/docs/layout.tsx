@@ -6,8 +6,8 @@ export default function DocLayout({ children }: { children: React.ReactNode }) {
     <div className="min-h-svh">
       <div className="max-w-screen-2xl mx-auto grid md:grid-cols-[300px_1fr] 2xl:border-x border-neutral-200">
         <aside
-          className="hidden border-r border-neutral-200 md:block p-5 md:p-10 
-        h-[calc(100vh-calc(var(--spacing)*14)-1px)] sticky top-[calc(var(--spacing)*14+1px)] overflow-auto"
+          className="hidden border-r border-neutral-200 md:block p-5 md:p-10 overflow-auto
+        h-[calc(100vh-calc(--spacing(14))-1px)] sticky top-[calc(--spacing(14)+1px)] "
         >
           <Nav />
         </aside>

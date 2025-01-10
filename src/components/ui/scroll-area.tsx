@@ -14,9 +14,7 @@ const ScrollArea = ({
     className={cn("relative overflow-hidden", className)}
     {...props}
   >
-    <ScrollAreaPrimitive.Viewport
-      className={cn("overscroll-contain", viewportClassName)}
-    >
+    <ScrollAreaPrimitive.Viewport className={cn("", viewportClassName)}>
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />

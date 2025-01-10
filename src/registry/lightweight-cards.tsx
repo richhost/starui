@@ -34,18 +34,19 @@ function Card({
     <div
       style={
         {
-          "--x": `calc(var(--spacing) * ${index * gapX})`,
-          "--y": `calc(var(--spacing) * ${index * gapY})`,
+          "--x": `calc(var(--spacing) * ${index} * ${gapX})`,
+          "--y": `calc(var(--spacing) * ${index} * ${gapY})`,
         } as React.CSSProperties
       }
       className={cn(
-        "group [grid-area:stack] translate-x-(--x) translate-y-(--y)",
+        "group [grid-area:stack] ",
+        `translate-x-(--x) translate-y-(--y)`,
         className
       )}
     >
       <div
         className={cn(
-          "group-hover:-translate-y-12 transition duration-500 ease-in-out border-2 border-black/5 rounded-md -skew-y-6 bg-white/10 backdrop-blur-sm relative after:absolute after:-inset-0.5 after:bg-linear-to-r after:from-transparent after:to-white after:pointer-events-none",
+          "group-hover:-translate-y-12 transition duration-500 ease-in-out rounded-md border-2 border-black/5 -skew-y-6 backdrop-blur-sm relative after:absolute after:inset-0 after:-z-10 after:rounded-[inherit] after:bg-linear-to-r after:from-white/50 after:to-transparent after:pointer-events-none",
           innerClassName
         )}
       >

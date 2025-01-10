@@ -1,4 +1,3 @@
-import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import {
   SiReact,
@@ -13,8 +12,8 @@ import { NeumorphismBox } from "@/registry/neumorphism-box";
 export function Hero() {
   return (
     <main
-      className="min-h-[calc(100vh-var(--spacing)*14)] flex flex-col
-      items-center justify-center gap-10"
+      className="min-h-[calc(--spacing(-14)+100vh)] flex flex-col
+      items-center justify-center gap-10 py-10"
     >
       <div>
         <div className="flex justify-center mb-6">
@@ -27,17 +26,16 @@ export function Hero() {
           </div>
         </div>
 
-        <h1 className="text-4xl lg:text-6xl text-balance font-bold font-poppins text-center">
+        <h1 className="text-4xl lg:text-6xl text-balance font-poppins font-bold text-center">
           Today, it's StarUI.
           <br />
           Tomorrow, it's yours!
         </h1>
 
-        <p className="text-balance text-center max-w-xl mt-4">
-          Transform your website with beautiful, customizable{" "}
+        <p className="text-center text-balance mx-auto max-w-lg mt-10">
+          Create beautiful, customizable website designs using{" "}
           <strong>Tailwind CSS v4</strong> and <strong>Motion React</strong>{" "}
-          components. <strong>Copy</strong>, <strong>paste</strong>, and tweak
-          to create designs that truly shine.
+          components. Just copy, paste, and tweak.
         </p>
       </div>
 
