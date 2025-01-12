@@ -75,11 +75,6 @@ export const COMPONENTS: Navigation[] = [
     isNew: true,
   },
   {
-    name: "Text Dispersion",
-    path: "/docs/components/text-dispersion",
-    isNew: true,
-  },
-  {
     name: "Select Model",
     path: "/docs/components/select-model",
     isNew: true,
