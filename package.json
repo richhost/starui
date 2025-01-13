@@ -5,7 +5,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "pnpm biome lint --write ./src"
   },
   "dependencies": {
     "@base-ui-components/react": "1.0.0-alpha.5",
@@ -13,7 +13,7 @@
     "@number-flow/react": "^0.4.4",
     "chroma-js": "^3.1.2",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.471.0",
+    "lucide-react": "^0.471.1",
     "motion": "^11.17.0",
     "next": "15.1.4",
     "react": "^19.0.0",
@@ -23,6 +23,7 @@
     "vaul": "^1.1.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@content-collections/core": "^0.8.0",
     "@content-collections/mdx": "^0.2.0",
     "@content-collections/next": "^0.2.4",
@@ -30,13 +31,13 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/chroma-js": "^2.4.5",
     "@types/node": "^22.10.5",
-    "@types/react": "^19.0.4",
-    "@types/react-dom": "^19.0.2",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.3",
     "postcss": "^8.4.49",
     "rehype-pretty-code": "^0.14.0",
     "remark-code-import": "^1.2.0",
     "remark-gfm": "^4.0.0",
-    "shiki": "^1.26.1",
+    "shiki": "^1.26.2",
     "tailwindcss": "4.0.0-beta.9",
     "typescript": "^5.7.3"
   },

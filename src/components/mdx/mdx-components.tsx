@@ -6,18 +6,18 @@ import { Tab, Tabs } from "./mdx-tabs";
 import { Iframe } from "./iframe";
 
 interface MdxProps {
-  code: string;
+	code: string;
 }
 
 const COMPONENTS = {
-  ComponentPreview,
-  pre: Pre,
-  Aside: MDXAside,
-  Tabs,
-  Tab,
-  Iframe,
+	ComponentPreview,
+	pre: Pre,
+	Aside: MDXAside,
+	Tabs,
+	Tab,
+	Iframe,
 };
 
 export function Mdx({ code }: MdxProps) {
-  return <MDXContent code={code} components={COMPONENTS} />;
+	return <MDXContent code={code} components={COMPONENTS} />;
 }

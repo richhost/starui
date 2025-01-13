@@ -1,9 +1,9 @@
-import React from "react";
+import type React from "react";
 
 export default function PreviewLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+	return <div>{children}</div>;
 }
