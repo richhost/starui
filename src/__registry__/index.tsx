@@ -40,4 +40,5 @@ export const Index: Record<
 	"light-weight-cards-demo": React.lazy(
 		() => import("@/example/light-weight-cards-demo"),
 	),
+	"around-text-demo": React.lazy(() => import("@/example/around-text-demo")),
 };
