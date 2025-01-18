@@ -85,8 +85,8 @@ export const COMPONENTS: Navigation[] = [
     isNew: true,
   },
   {
-    name: "Around Text",
-    path: "/docs/components/around-text",
+    name: "Word Galaxy",
+    path: "/docs/components/word-galaxy",
     isNew: true,
   },
 ];
