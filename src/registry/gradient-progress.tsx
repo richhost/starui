@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import useMeasure from "react-use-measure";
-import { scale } from "chroma-js";
+import chroma from "chroma-js";
 
 interface GradientProgressProps {
 	gap?: number;
@@ -38,7 +38,7 @@ function GradientProgress({
 
 	// Create color interpolator using chroma.js
 	const colorScale = useMemo(() => {
-		return scale([startColor, endColor]).mode("oklch");
+		return chroma.scale([startColor, endColor]).mode("oklch");
 	}, [startColor, endColor]);
 
 	return (
