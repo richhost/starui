@@ -102,7 +102,7 @@ figure[data-rehype-pretty-code-figure] {
   @apply font-mono my-0;
 
   pre {
-    @apply m-0;
+    @apply m-0 break-words whitespace-pre-wrap;
   }
 
   code {
