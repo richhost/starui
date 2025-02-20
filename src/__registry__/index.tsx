@@ -2,7 +2,6 @@ import React from "react";
 
 export const Index: Record<
   string,
-  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   React.LazyExoticComponent<(props: any) => React.JSX.Element>
 > = {
   "fancy-button-demo": React.lazy(() => import("@/example/fancy-button-demo")),
