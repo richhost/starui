@@ -102,7 +102,7 @@ function FAQSpring() {
               onClick={() => {
                 setValue(value === item.id ? "" : item.id);
               }}
-              className="font-medium cursor-pointer px-3 py-2 w-full flex items-center justify-between"
+              className="font-medium cursor-pointer px-3 py-2 w-full flex items-center justify-between gap-4"
             >
               <div className="flex items-center gap-2">
                 {item.icon}
@@ -125,8 +125,8 @@ function FAQSpring() {
                 className="text-sm"
                 transition={{
                   type: "spring",
-                  stiffness: 80,
-                  damping: 8,
+                  stiffness: 100,
+                  damping: 10,
                   mass: 1,
                 }}
               >
