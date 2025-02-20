@@ -89,6 +89,11 @@ export const COMPONENTS: Navigation[] = [
     path: "/docs/components/word-galaxy",
     isNew: true,
   },
+  {
+    name: "FAQ Spring",
+    path: "/docs/components/faq-spring",
+    isNew: true,
+  },
 ];
 
 export const NAVIGATION_CONFIG: NavigationGroup[] = [
