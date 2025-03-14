@@ -57,41 +57,38 @@ export const COMPONENTS: Navigation[] = [
   {
     name: "Pricing",
     path: "/docs/components/pricing",
-    isNew: true,
   },
   {
     name: "Neumorphism Box",
     path: "/docs/components/neumorphism-box",
-    isNew: true,
   },
   {
     name: "Canvas Like",
     path: "/docs/components/canvas-like",
-    isNew: true,
   },
   {
     name: "Stack Card",
     path: "/docs/components/stack-card",
-    isNew: true,
   },
   {
     name: "Select Model",
     path: "/docs/components/select-model",
-    isNew: true,
   },
   {
     name: "Light Weight Cards",
     path: "/docs/components/light-weight-cards",
-    isNew: true,
   },
   {
     name: "Word Galaxy",
     path: "/docs/components/word-galaxy",
-    isNew: true,
   },
   {
     name: "FAQ Spring",
     path: "/docs/components/faq-spring",
+  },
+  {
+    name: "Button Steps",
+    path: "/docs/components/button-steps",
     isNew: true,
   },
 ];

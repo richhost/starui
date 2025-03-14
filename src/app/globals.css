@@ -14,7 +14,7 @@
   inherits: false;
 }
 
-@theme {
+@theme inline {
   --default-font-family: var(--font-mona-sans);
   --default-mono-font-family: var(--font-jetbrains-mono);
   --font-poppins: var(--font-poppins);
@@ -94,6 +94,19 @@
     }
     to {
       --hue-rotation: 1turn;
+    }
+  }
+
+  --animate-button-step: button-step 0.6s var(--ease-in-out) normal forwards;
+  @keyframes button-step {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 }

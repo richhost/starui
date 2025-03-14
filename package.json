@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ark-ui/react": "^5.0.1",
     "@base-ui-components/react": "1.0.0-alpha.6",
     "@icons-pack/react-simple-icons": "^11.2.0",
     "@number-flow/react": "^0.5.7",

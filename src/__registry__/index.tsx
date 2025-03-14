@@ -41,4 +41,5 @@ export const Index: Record<
   ),
   "word-galaxy-demo": React.lazy(() => import("@/example/word-galaxy-demo")),
   "faq-spring-demo": React.lazy(() => import("@/example/faq-spring-demo")),
+  "button-steps-demo": React.lazy(() => import("@/example/button-steps-demo")),
 };

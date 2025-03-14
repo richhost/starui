@@ -1,0 +1,52 @@
+---
+title: Button Steps
+---
+
+<Tabs>
+  <Tab value="Preview"><ComponentPreview name="button-steps-demo" /></Tab>
+  <Tab value="Code">
+    ```tsx file=<rootDir>/src/example/button-steps-demo.tsx
+    ```
+  </Tab>
+</Tabs>
+
+---
+
+## Install
+
+**Update `global.css`**
+
+Add the following code to your `global.css` file:
+
+```css
+@theme inline {
+  --animate-button-step: button-step 0.6s var(--ease-in-out) normal forwards;
+  @keyframes button-step {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+```
+
+**Copy and paste the following code into your project.**
+
+```tsx file=<rootDir>/src/registry/button-steps.tsx
+```
+
+---
+
+## Props
+
+### CanvasLike
+| Prop | Type | Description |
+|---|---|---|
+| className | string |  |
+| steps | number | step count, default steps = 4 |
+| children | ReactNode | |
