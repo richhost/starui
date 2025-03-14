@@ -73,7 +73,7 @@ function FAQSpring() {
   };
 
   return (
-    <div className="max-w-sm w-full">
+    <div className="max-w-sm w-full mx-auto">
       {data.map((item, index) => (
         <motion.div
           initial={false}
