@@ -8,15 +8,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ark-ui/react": "^5.0.1",
-    "@base-ui-components/react": "1.0.0-alpha.6",
+    "@ark-ui/react": "^5.3.1",
+    "@base-ui-components/react": "1.0.0-alpha.7",
     "@icons-pack/react-simple-icons": "^11.2.0",
-    "@number-flow/react": "^0.5.7",
+    "@number-flow/react": "^0.5.8",
     "chroma-js": "^3.1.2",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.479.0",
-    "motion": "^12.5.0",
-    "next": "15.2.2",
+    "lucide-react": "^0.483.0",
+    "motion": "^12.6.0",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-use-measure": "^2.1.7",
@@ -27,26 +27,33 @@
     "@content-collections/core": "^0.8.2",
     "@content-collections/mdx": "^0.2.2",
     "@content-collections/next": "^0.2.6",
-    "@eslint/eslintrc": "^3.3.0",
-    "@tailwindcss/postcss": "^4.0.14",
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.0.16",
     "@tailwindcss/typography": "^0.5.16",
     "@types/chroma-js": "^3.1.1",
-    "@types/node": "^22.13.10",
-    "@types/react": "^19.0.10",
+    "@types/node": "^22.13.13",
+    "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
-    "eslint": "^9.22.0",
-    "eslint-config-next": "^15.2.2",
+    "eslint": "^9.23.0",
+    "eslint-config-next": "^15.2.4",
     "postcss": "^8.5.3",
-    "rehype-pretty-code": "^0.14.0",
+    "rehype-pretty-code": "^0.14.1",
     "remark-code-import": "^1.2.0",
     "remark-gfm": "^4.0.1",
-    "shiki": "^2.5.0",
-    "tailwindcss": "^4.0.14",
+    "shiki": "^3.2.1",
+    "tailwindcss": "^4.0.16",
     "typescript": "^5.8.2"
   },
   "postcss": {
     "plugins": {
       "@tailwindcss/postcss": {}
     }
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
